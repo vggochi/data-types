@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    /* Gradiente animado em tons de vermelho */
+    background: linear-gradient(135deg, #3f0000, #7a0000, #ff0000, #b10000);
+    background-size: 400% 400%;
+    animation: waveGradient 12s ease-in-out infinite;
+    font-family: 'Montserrat', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes waveGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 24px;
+    font-size: 2.2em;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 8px #5a0000,
+        0 0 16px #a10000,
+        0 0 32px #ff0000,
+        0 0 48px #970000;
+    background: linear-gradient(90deg, #ff0000 0%, #af190e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: ledBlink 2.2s infinite alternate;
+}
+
+@keyframes ledBlink {
+    0% {
+        text-shadow:
+            0 0 8px #ff3030,
+            0 0 16px #ff0000,
+            0 0 32px #8f0909,
+            0 0 48px #c42626;
+        opacity: 1;
+    }
+    60% {
+        text-shadow:
+            0 0 2px #ff0000,
+            0 0 4px #8f1313;
+        opacity: 0.7;
+    }
+    100% {
+        text-shadow:
+            0 0 0px #ff0000,
+            0 0 0px #791010;
+        opacity: 0.4;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    font-weight: bold;
+    color: #2d3e50;
+}
+
+input, select {
+    padding: 8px;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background: #ff0303;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #8d0e0e;
+}
+
+#resultado {
+    margin-top: 24px;
+    font-size: 18px;
+    color: #ff0101;
+    text-align: center;
+}
